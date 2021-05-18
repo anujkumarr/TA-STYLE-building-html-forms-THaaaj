@@ -63,6 +63,7 @@ body{
   max-width: 1320px;
   width: 80%;
   margin: 0 auto;
+  box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.3);
 }
 a{
   text-decoration: none;
@@ -74,9 +75,17 @@ button{
   background-color: var(--secondary);
   color: #fff;
   text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  transition: box-shadow 500ms ease-in-out
+}
+.btn:hover{
+  box-shadow: 0 4px 8px rgba(0,0,0,0.7);
 }
 .btn-primary{
-  padding: 10px 80px;
+  display: block;
+  margin: 0 auto;
+  padding: 12px 40px;
 }
 .btn-secondary{
   padding: 10px 40px;
@@ -99,12 +108,7 @@ button{
 .btn-penta{
   padding: 10px 20px;
 }
-.btn-hexa{
-
-}
-.btn-hepta{
-
-}
+ 
 
 .flex{
   display: flex;
@@ -122,6 +126,9 @@ button{
 }
 .align-center{
   align-items: center;
+}
+.align-start{
+  align-items: flex-start;
 }
 .justify-start{
   justify-content: flex-start;
@@ -153,16 +160,46 @@ button{
 .flex-90{
   flex: 0 1 90%;
 }
+/* form */
 
-.form-control{
-  background-color:#fff ;
-  padding: 50px;
-  width: 80%;
-  margin: 0 auto;
+form{
+  background-color: #fff;
+  max-width: 868px;
+  margin:0 auto;
+  padding: 32px;
+  margin-top: 80px;
 }
-
+label{
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 10px;
+}
+.form-control{
+ display: block;
+ width: 100%;
+ border: 0;
+ outline: 0;
+ padding: 12px 16px;
+ border: 1px solid transparent;
+}
+.form-control:focus{
+ border-color: var(--secondary);
+}
+form .btn{
+  width: 100%;
+  border: 0;
+  box-shadow: none;
+}
 .padding{
   padding: 40px ;
+}
+.margin-top{
+  margin-top: 48px;
+}
+.active:hover{
+  color: var(--secondary);
 }
 /* header */
 
@@ -172,6 +209,9 @@ button{
 strong{
   font-size: 30px;
   text-transform: uppercase;
+}
+.nav-item{
+  box-shadow: none;
 }
 .nav-link a{
   padding-left: 50px;
@@ -189,13 +229,10 @@ main{
 .hero{
  background: linear-gradient( to right, rgba(0,0,0,0.7), rgb(0,0,0,0.7)), url(../banner.jpg)  no-repeat  ;
  background-size: cover;
- height: 100vh;
+ padding: 120px 0px;
 }
 .begin{
   text-align: center;
-}
-.begin{
-  padding: 60px 0px;
 }
 .head-text{
   font-size: 32px;
@@ -213,21 +250,9 @@ main{
   background-color: var(--secondary);
   border-radius: 50%;
   color: var(--primary);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 0 auto;
+  line-height: 40px;
 }
-label{
-  color: #000;
-}
-.field-set{
-  flex-direction: column;
-}
-.destiny{
-  width: 100%;
-}
-
-/* article-text */
 .bg{
   background-color: #fff;
 }
@@ -315,8 +340,7 @@ label{
 }
 .cont-map .asia{
   background-color: var(--tirtiary);
-}
-
+} 
 /* hotel */
 .padding-price{
   padding: 50px 120px 80px 120px;
@@ -376,24 +400,35 @@ label{
   width: 100%;
   height: 450px;
 }
-.form{
-  width: 450px;
-  height: 350px;
-  background: #fff;
-  padding: 20px;
+.location{
+  position: relative;
 }
-.control{
-  width: 100%;
-  margin: 10px 0px;
-  border: none;
-  background: rgb(226, 219, 219);
-  padding: 10px 12px;
+.overlay{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(0,0,0,0.4);
 }
-.input-form input{
-  border: none;
-  background: rgb(226, 219, 219);
-  padding: 10px 12px;
+.location form{
+  position: absolute;
+  top: 0;
+  right: 80px;
+  width: 30%;
 }
 .box-btn{
   text-align: center;
+}
+.location .form-control{
+  background-color: #f1e7e7;
+  margin-bottom: 16px;
+}
+/* footer */
+footer{
+  text-align: center;
+  color: var(--primary);
+  background-color: var(--secondary);
+  box-shadow: none;
+  padding:40px 0px ;
 }
